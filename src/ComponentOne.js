@@ -5,7 +5,7 @@ import templates from './ComponentOne.soy';
 
 class ComponentOne extends Component {
 	onClick_() {
-		this.label = 'Wow a Label!';
+		this.label = 'From Component One!';
 	}
 }
 
