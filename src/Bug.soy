@@ -1,0 +1,28 @@
+{namespace Bug}
+
+/**
+ * This renders the component's whole content.
+ *
+ * @param show
+ */
+{template .render}
+	<div class="bug">
+		<div><a href="javascript:;" onClick="onClick_">Show Two</a></div>
+
+		{call ComponentOne.render /}
+
+		{call ComponentTwo.render}
+			{param show: $show /}
+		{/call}
+	</div>
+{/template}
+
+{template .one}
+	{call ComponentOne.render /}
+{/template}
+
+{template .two}
+	{call ComponentTwo.render}
+		{param show: $show /}
+	{/call}
+{/template}
